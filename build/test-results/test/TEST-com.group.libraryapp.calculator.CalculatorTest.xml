@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.group.libraryapp.calculator.CalculatorTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-03-18T12:32:18" hostname="macui-MacBookPro.local" time="0.028">
+  <properties/>
+  <testcase name="divideExceptionTest()" classname="com.group.libraryapp.calculator.CalculatorTest" time="0.028"/>
+  <system-out><![CDATA[모든 테스트 시작 전
+각 테스트 시작 전
+각 테스트 종료 후
+모든 테스트 종료 후
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
