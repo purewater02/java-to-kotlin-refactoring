@@ -1,7 +1,10 @@
 package com.group.libraryapp.dto.book.request;
 
-public class BookLoanRequest {
+import lombok.AllArgsConstructor;
+import lombok.Getter;
 
+@AllArgsConstructor
+public class BookLoanRequest {
   private String userName;
   private String bookName;
 
@@ -12,5 +15,4 @@ public class BookLoanRequest {
   public String getBookName() {
     return bookName;
   }
-
 }

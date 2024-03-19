@@ -5,6 +5,8 @@
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-test-autoconfigure/2.6.8/da8747b50d70ad643527c845044266cf851205d9/spring-boot-test-autoconfigure-2.6.8.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-test-autoconfigure/2.6.8/1bee6cb784d3cf961bab43e5ce10443cc97d35e9/spring-boot-test-autoconfigure-2.6.8-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

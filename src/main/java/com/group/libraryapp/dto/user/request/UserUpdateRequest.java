@@ -1,5 +1,8 @@
 package com.group.libraryapp.dto.user.request;
 
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
 public class UserUpdateRequest {
 
   private long id;

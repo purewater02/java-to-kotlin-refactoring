@@ -5,6 +5,8 @@
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-web/2.6.8/81a3f6bf2b072da9ab67a5a0c33d9140736c436a/spring-boot-starter-web-2.6.8.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-web/2.6.8/2a7ebb708584fbb6b5135a9d7e8558c186413bc0/spring-boot-starter-web-2.6.8-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

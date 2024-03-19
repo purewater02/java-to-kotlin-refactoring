@@ -5,6 +5,8 @@
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-logging/2.6.8/8b473f1982ebd19f2fd16f7e3f65b6e8c070d0ea/spring-boot-starter-logging-2.6.8.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-logging/2.6.8/490a1c663324bf00c05f9958fd9aafaaa86f3068/spring-boot-starter-logging-2.6.8-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>
