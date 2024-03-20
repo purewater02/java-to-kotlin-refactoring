@@ -83,7 +83,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="library-app.main" />
+    <orderEntry type="module" module-name="com.group.library-app.main" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-data-jpa:2.6.8" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-web:2.6.8" level="project" />
     <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.21" level="project" />
