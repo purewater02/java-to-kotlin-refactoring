@@ -45,14 +45,23 @@ class BookService(
 
     @Transactional(readOnly = true)
     fun countLoanedBook(): Int {
-        return userLoanHistoryRepository.findAllByStatus(UserLoanStatus.LOANED).size
+        // JPA 쿼리 메서드를 사용한 카운트
+        return userLoanHistoryRepository.countByStatus(UserLoanStatus.LOANED).toInt()
+
+//         kotlin 기본 문법을 사용한 카운트
+//         메모리 낭비가 심한 편.
+//        return userLoanHistoryRepository.findAllByStatus(UserLoanStatus.LOANED).size
     }
 
     @Transactional(readOnly = true)
     fun getBookStatistics(): List<BookStatResponse> {
-        return bookRepository.findAll()
-            .groupBy { book -> book.type }
-            .map { (type, books) -> BookStatResponse(type, books.size) }
+        // JPQL을 활용해서 projection을 사용해서 바로 BookStatResponse를 만들어서 리턴
+        return bookRepository.getStats()
+
+//         이것도 마찬가지로 메모리 낭비가 심하다.
+//        return bookRepository.findAll()
+//            .groupBy { book -> book.type }
+//            .map { (type, books) -> BookStatResponse(type, books.size) }
 
 // 아래 코드를 위와 같이 바꿀 수 있다.
 //        val results = mutableListOf<BookStatResponse>()

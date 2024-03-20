@@ -60,5 +60,8 @@ spotless {
         targetExclude "$buildDir/**/*.kt"
         targetExclude "bin/**/*.kt"
         ktlint("0.48.1")
+        trimTrailingWhitespace()
+        indentWithSpaces()
+        endWithNewline()
     }
 }
