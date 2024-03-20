@@ -9,6 +9,7 @@ import com.group.libraryapp.domain.user.loanhistory.UserLoanHistoryRepository
 import com.group.libraryapp.dto.book.request.BookLoanRequest
 import com.group.libraryapp.dto.book.request.BookRequest
 import com.group.libraryapp.dto.book.request.BookReturnRequest
+import com.group.libraryapp.dto.book.response.BookStatResponse
 import com.group.libraryapp.type.BookType
 import com.group.libraryapp.type.UserLoanStatus
 import org.assertj.core.api.AssertionsForInterfaceTypes.assertThat
@@ -88,7 +89,7 @@ class BookServiceTest @Autowired constructor(
             UserLoanHistory.fixture(
                 savedUser,
                 "코틀린 마스터",
-                UserLoanStatus.LOANED
+                UserLoanStatus.LOANED,
             ),
         )
         val request = BookLoanRequest("pure", "코틀린 마스터")
@@ -116,7 +117,7 @@ class BookServiceTest @Autowired constructor(
             UserLoanHistory.fixture(
                 savedUser,
                 "코틀린 마스터",
-                UserLoanStatus.LOANED
+                UserLoanStatus.LOANED,
 
             ),
         )
@@ -129,5 +130,48 @@ class BookServiceTest @Autowired constructor(
         val results = userLoanHistoryRepository.findAll()
         assertThat(results).hasSize(1)
         assertThat(results[0].status).isEqualTo(UserLoanStatus.RETURNED)
+    }
+
+    @Test
+    @DisplayName("책 대여 권수를 정상 응답한다")
+    fun countLoanedBookTest() {
+        // given
+        val savedUser = userRepository.save(User("pure", null))
+        userLoanHistoryRepository.saveAll(
+            listOf(
+                UserLoanHistory.fixture(savedUser, "A"),
+                UserLoanHistory.fixture(savedUser, "B", UserLoanStatus.RETURNED),
+            ),
+        )
+
+        // when
+        val result = bookService.countLoanedBook()
+
+        // then
+        assertThat(result).isEqualTo(1)
+    }
+
+    @Test
+    @DisplayName("분야별 책 권수를 정상 확인한다")
+    fun getBookStatisticsTest() {
+        // given
+        bookRepository.saveAll(
+            listOf(
+                Book.fixture("A", BookType.COMPUTER),
+                Book.fixture("B", BookType.COMPUTER),
+                Book.fixture("C", BookType.SOCIETY),
+            ),
+        )
+
+        // when
+        val results = bookService.getBookStatistics()
+
+        // then
+        assertCount(results, BookType.COMPUTER, 2)
+        assertCount(results, BookType.SOCIETY, 1)
+    }
+
+    private fun assertCount(results: List<BookStatResponse>, type: BookType, count: Int) {
+        assertThat(results.first { result -> result.type == type }.count).isEqualTo(count)
     }
 }
