@@ -1,7 +1,6 @@
 package com.group.libraryapp.dto.user.response
 
 import com.group.libraryapp.domain.user.User
-import com.group.libraryapp.domain.user.UserRepository
 
 data class UserResponse(
     val id: Long,
@@ -14,7 +13,7 @@ data class UserResponse(
             return UserResponse(
                 id = user.id!!,
                 name = user.name,
-                age = user.age
+                age = user.age,
             )
         }
     }
