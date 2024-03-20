@@ -4,29 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5ff4692c-cdf3-470b-8f3a-360d0003ef04" name="Changes" comment="refactored all the repositories and services to kotlin">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/group/libraryapp/dto/book/request/BookLoanRequest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/group/libraryapp/dto/book/request/BookRequest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/group/libraryapp/dto/book/request/BookReturnRequest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/group/libraryapp/dto/user/request/UserCreateRequest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/group/libraryapp/dto/user/request/UserUpdateRequest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/group/libraryapp/dto/user/response/UserResponse.kt" afterDir="false" />
+    <list default="true" id="5ff4692c-cdf3-470b-8f3a-360d0003ef04" name="Changes" comment="refactored all the Dtos to Kotlin">
+      <change afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/com/group/libraryapp/controller/book/BookController.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/com/group/libraryapp/controller/user/UserController.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/group/libraryapp/dto/book/request/BookLoanRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/group/libraryapp/dto/book/request/BookRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/group/libraryapp/dto/book/request/BookReturnRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/group/libraryapp/dto/user/request/UserCreateRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/group/libraryapp/dto/user/request/UserUpdateRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/group/libraryapp/dto/user/response/UserResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/group/libraryapp/domain/user/User.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/group/libraryapp/domain/user/User.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/group/libraryapp/service/book/BookService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/group/libraryapp/service/book/BookService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/group/libraryapp/service/user/UserService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/group/libraryapp/service/user/UserService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/group/libraryapp/controller/book/BookController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/group/libraryapp/controller/user/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/group/libraryapp/controller/user/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/com/group/libraryapp/calculator/CalculatorTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/com/group/libraryapp/calculator/CalculatorTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -85,6 +79,9 @@
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
   </component>
+  <component name="KotlinCodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -137,7 +134,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.general",
+    "settings.editor.selected.configurable": "preferences.sourceCode.Kotlin",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -151,6 +148,7 @@
       <recent name="$PROJECT_DIR$/src/main/kotlin/com/group/libraryapp/domain" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.group.libraryapp.controller.book" />
       <recent name="com.group.libraryapp.user" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
@@ -320,7 +318,7 @@
       <workItem from="1710835248881" duration="598000" />
       <workItem from="1710845055172" duration="49000" />
       <workItem from="1710845115397" duration="3249000" />
-      <workItem from="1710850731576" duration="11082000" />
+      <workItem from="1710850731576" duration="12631000" />
     </task>
     <task id="LOCAL-00001" summary="init: gitignore">
       <option name="closed" value="true" />
@@ -386,7 +384,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710869793070</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="refactored all the Dtos to Kotlin">
+      <option name="closed" value="true" />
+      <created>1710916947135</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1710916947135</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -410,7 +416,8 @@
     <MESSAGE value="init" />
     <MESSAGE value="refactored all the domain entities to kotlin" />
     <MESSAGE value="refactored all the repositories and services to kotlin" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactored all the repositories and services to kotlin" />
+    <MESSAGE value="refactored all the Dtos to Kotlin" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactored all the Dtos to Kotlin" />
   </component>
   <component name="WfRunsListSearchHistory"><![CDATA[{
   "history": [

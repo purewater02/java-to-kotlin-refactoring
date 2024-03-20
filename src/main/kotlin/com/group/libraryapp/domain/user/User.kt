@@ -2,7 +2,12 @@ package com.group.libraryapp.domain.user
 
 import com.group.libraryapp.domain.book.Book
 import com.group.libraryapp.domain.user.loanhistory.UserLoanHistory
-import javax.persistence.*
+import javax.persistence.CascadeType
+import javax.persistence.Entity
+import javax.persistence.GeneratedValue
+import javax.persistence.GenerationType
+import javax.persistence.Id
+import javax.persistence.OneToMany
 
 @Entity
 class User(
@@ -12,7 +17,7 @@ class User(
     val userLoanHistories: MutableList<UserLoanHistory> = mutableListOf(),
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Long? = null
+    val id: Long? = null,
 ) {
     init {
         if (name.isBlank()) {
@@ -29,6 +34,6 @@ class User(
     }
 
     fun returnBook(bookName: String) {
-        this.userLoanHistories.first {history -> history.bookName == bookName}.doReturn()
+        this.userLoanHistories.first { history -> history.bookName == bookName }.doReturn()
     }
 }

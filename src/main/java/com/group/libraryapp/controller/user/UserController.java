@@ -4,9 +4,8 @@ import com.group.libraryapp.dto.user.request.UserCreateRequest;
 import com.group.libraryapp.dto.user.request.UserUpdateRequest;
 import com.group.libraryapp.dto.user.response.UserResponse;
 import com.group.libraryapp.service.user.UserService;
-import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class UserController {
@@ -36,5 +35,4 @@ public class UserController {
   public void deleteUser(@RequestParam String name) {
     userService.deleteUser(name);
   }
-
 }

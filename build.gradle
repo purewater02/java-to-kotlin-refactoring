@@ -5,7 +5,7 @@ plugins {
     id 'org.jetbrains.kotlin.jvm' version '1.6.21'
     id 'org.jetbrains.kotlin.plugin.jpa' version '1.6.21'
     id 'org.jetbrains.kotlin.plugin.spring' version '1.6.21'
-    id "com.diffplug.spotless" version "6.25.0"
+    id "com.diffplug.spotless" version "6.13.0"
 }
 
 group = 'com.group'
@@ -58,6 +58,6 @@ spotless {
         target "**/*.kt"
         targetExclude "$buildDir/**/*.kt"
         targetExclude "bin/**/*.kt"
-        ktlint()
+        ktlint("0.48.1")
     }
 }
