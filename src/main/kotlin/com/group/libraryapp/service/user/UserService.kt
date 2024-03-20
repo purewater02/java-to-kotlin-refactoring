@@ -17,14 +17,14 @@ class UserService(
 ) {
     @Transactional
     fun saveUser(request: UserCreateRequest) {
-        val newUser = User(request.name, request.age)
+        val newUser = request.name?.let { User(it, request.age) }
         userRepository.save(newUser)
     }
 
     @Transactional(readOnly = true)
     fun getUsers(): List<UserResponse> {
         return userRepository.findAll()
-            .map { user -> UserResponse(user) }
+            .map { user -> UserResponse.of(user) }
     }
 
     @Transactional

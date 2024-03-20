@@ -1,12 +1,9 @@
-package com.group.libraryapp.dto.book.request;
+package com.group.libraryapp.dto.book.request
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.AllArgsConstructor
+import lombok.Getter
 
-@Getter
-@AllArgsConstructor
-public class BookRequest {
-
-  private String name;
-
+data class BookRequest(
+    val name: String,
+) {
 }

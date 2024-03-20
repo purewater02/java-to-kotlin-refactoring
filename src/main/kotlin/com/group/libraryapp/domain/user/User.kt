@@ -10,11 +10,10 @@ class User(
     val age: Int?,
     @OneToMany(mappedBy = "user", cascade = [CascadeType.ALL], orphanRemoval = true)
     val userLoanHistories: MutableList<UserLoanHistory> = mutableListOf(),
-) {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long? = null
-
+) {
     init {
         if (name.isBlank()) {
             throw IllegalArgumentException("이름은 비어 있을 수 없습니다.")

@@ -1,12 +1,10 @@
-package com.group.libraryapp.dto.user.request;
+package com.group.libraryapp.dto.user.request
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-@AllArgsConstructor
-@Getter
-public class UserCreateRequest {
+import lombok.AllArgsConstructor
+import lombok.Getter
 
-  private String name;
-  private Integer age;
-
+data class UserCreateRequest(
+    val name: String? = null,
+    val age: Int? = null
+) {
 }

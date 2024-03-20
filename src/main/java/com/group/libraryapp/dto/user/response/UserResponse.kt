@@ -1,29 +1,21 @@
-package com.group.libraryapp.dto.user.response;
+package com.group.libraryapp.dto.user.response
 
-import com.group.libraryapp.domain.user.User;
+import com.group.libraryapp.domain.user.User
+import com.group.libraryapp.domain.user.UserRepository
 
-public class UserResponse {
+data class UserResponse(
+    val id: Long,
+    val name: String,
+    val age: Int?,
+) {
 
-  private final long id;
-  private final String name;
-  private final Integer age;
-
-  public UserResponse(User User) {
-    this.id = User.getId();
-    this.name = User.getName();
-    this.age = User.getAge();
-  }
-
-  public long getId() {
-    return id;
-  }
-
-  public String getName() {
-    return name;
-  }
-
-  public Integer getAge() {
-    return age;
-  }
-
+    companion object {
+        fun of(user: User): UserResponse {
+            return UserResponse(
+                id = user.id!!,
+                name = user.name,
+                age = user.age
+            )
+        }
+    }
 }

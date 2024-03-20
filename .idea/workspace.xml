@@ -4,26 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5ff4692c-cdf3-470b-8f3a-360d0003ef04" name="Changes" comment="refactored all the domain entities to kotlin">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/group/libraryapp/domain/book/BookRepository.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/group/libraryapp/domain/user/UserRepository.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/group/libraryapp/domain/user/loanhistory/UserLoanHistoryRepository.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/group/libraryapp/service/book/BookService.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/group/libraryapp/service/user/UserService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/library-app.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/library-app.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/library-app.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/library-app.test.iml" afterDir="false" />
+    <list default="true" id="5ff4692c-cdf3-470b-8f3a-360d0003ef04" name="Changes" comment="refactored all the repositories and services to kotlin">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/group/libraryapp/dto/book/request/BookLoanRequest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/group/libraryapp/dto/book/request/BookRequest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/group/libraryapp/dto/book/request/BookReturnRequest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/group/libraryapp/dto/user/request/UserCreateRequest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/group/libraryapp/dto/user/request/UserUpdateRequest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/group/libraryapp/dto/user/response/UserResponse.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/group/libraryapp/domain/book/BookRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/group/libraryapp/domain/user/UserRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/group/libraryapp/domain/user/loanhistory/UserLoanHistoryRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/group/libraryapp/dto/user/response/UserResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/group/libraryapp/dto/user/response/UserResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/group/libraryapp/service/book/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/group/libraryapp/service/book/BookService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/group/libraryapp/service/user/UserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/group/libraryapp/user/User.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/group/libraryapp/domain/user/User.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/group/libraryapp/user/loanhistory/UserLoanHistory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/group/libraryapp/domain/user/loanhistory/UserLoanHistory.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/com/group/libraryapp/service/book/JavaBookServiceTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/com/group/libraryapp/service/book/JavaBookServiceTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/com/group/libraryapp/service/user/UserServiceTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/com/group/libraryapp/service/user/UserServiceTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/group/libraryapp/dto/book/request/BookLoanRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/group/libraryapp/dto/book/request/BookRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/group/libraryapp/dto/book/request/BookReturnRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/group/libraryapp/dto/user/request/UserCreateRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/group/libraryapp/dto/user/request/UserUpdateRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/group/libraryapp/dto/user/response/UserResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/group/libraryapp/domain/user/User.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/group/libraryapp/domain/user/User.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/group/libraryapp/service/book/BookService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/group/libraryapp/service/book/BookService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/group/libraryapp/service/user/UserService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/group/libraryapp/service/user/UserService.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +45,17 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="library-app" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="library-app" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="library-app" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="verification" type="c8890929:TasksNode$1" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
@@ -108,6 +117,8 @@
     "Gradle.UserServiceTest.saveUser.executor": "Run",
     "Gradle.UserServiceTest.updateUserNameTest.executor": "Run",
     "Gradle.library-app [bootRun].executor": "Run",
+    "Gradle.library-app [spotlessApply].executor": "Run",
+    "Gradle.library-app [spotlessKotlinApply].executor": "Run",
     "Kotlin.CalculatorTestKt.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -148,55 +159,7 @@
       <recent name="com.group.libraryapp.calculator" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.JavaBookServiceTest.loanBook">
-    <configuration name="BookServiceTest.loanBookFailTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.group.libraryapp.service.book.BookServiceTest.loanBookFailTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="BookServiceTest.returnBook" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.group.libraryapp.service.book.BookServiceTest.returnBook&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Gradle.library-app [spotlessApply]">
     <configuration name="JavaBookServiceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -269,6 +232,50 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="library-app [spotlessApply]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="spotlessApply" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="library-app [spotlessKotlinApply]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="spotlessKotlinApply" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="library-app" />
       <method v="2">
@@ -291,11 +298,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.library-app [spotlessApply]" />
+        <item itemvalue="Gradle.library-app [spotlessKotlinApply]" />
         <item itemvalue="Gradle.JavaBookServiceTest.loanBook" />
         <item itemvalue="Gradle.JavaBookServiceTest" />
         <item itemvalue="Gradle.UserServiceTest" />
-        <item itemvalue="Gradle.BookServiceTest.returnBook" />
-        <item itemvalue="Gradle.BookServiceTest.loanBookFailTest" />
       </list>
     </recent_temporary>
   </component>
@@ -313,7 +320,7 @@
       <workItem from="1710835248881" duration="598000" />
       <workItem from="1710845055172" duration="49000" />
       <workItem from="1710845115397" duration="3249000" />
-      <workItem from="1710850731576" duration="8126000" />
+      <workItem from="1710850731576" duration="11082000" />
     </task>
     <task id="LOCAL-00001" summary="init: gitignore">
       <option name="closed" value="true" />
@@ -371,7 +378,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710862891994</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="refactored all the repositories and services to kotlin">
+      <option name="closed" value="true" />
+      <created>1710869793070</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1710869793070</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -394,7 +409,8 @@
     <MESSAGE value="fix: .gitignore" />
     <MESSAGE value="init" />
     <MESSAGE value="refactored all the domain entities to kotlin" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactored all the domain entities to kotlin" />
+    <MESSAGE value="refactored all the repositories and services to kotlin" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactored all the repositories and services to kotlin" />
   </component>
   <component name="WfRunsListSearchHistory"><![CDATA[{
   "history": [

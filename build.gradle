@@ -5,6 +5,7 @@ plugins {
     id 'org.jetbrains.kotlin.jvm' version '1.6.21'
     id 'org.jetbrains.kotlin.plugin.jpa' version '1.6.21'
     id 'org.jetbrains.kotlin.plugin.spring' version '1.6.21'
+    id "com.diffplug.spotless" version "6.25.0"
 }
 
 group = 'com.group'
@@ -42,5 +43,21 @@ compileKotlin {
 compileTestKotlin {
     kotlinOptions {
         jvmTarget = "11"
+    }
+}
+
+spotless {
+    java {
+        target "**/*.java"
+        targetExclude "$buildDir/**/*.java"
+        targetExclude "bin/**/*.java"
+        googleJavaFormat()
+        removeUnusedImports()
+    }
+    kotlin {
+        target "**/*.kt"
+        targetExclude "$buildDir/**/*.kt"
+        targetExclude "bin/**/*.kt"
+        ktlint()
     }
 }
