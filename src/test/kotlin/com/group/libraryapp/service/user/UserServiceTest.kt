@@ -90,13 +90,13 @@ class UserServiceTest @Autowired constructor(
     @Test
     @DisplayName("대출 기록이 없는 유저도 응답에 포함된다.")
     fun getUserLoanHistoriesTest1() {
-        //given
+        // given
         userRepository.save(User.fixture("A", null))
 
-        //when
+        // when
         val results = userService.getUserLoanHistories()
 
-        //then
+        // then
         assertThat(results).hasSize(1)
         assertThat(results[0].name).isEqualTo("A")
         assertThat(results[0].books).isEmpty()
@@ -105,23 +105,26 @@ class UserServiceTest @Autowired constructor(
     @Test
     @DisplayName("대출 기록이 많은 유저의 응답이 정상 동작한다.")
     fun getUserLoanHistoriesTest2() {
-        //given
-        val savedUsers = userRepository.saveAll(listOf(
-            User.fixture("A", null),
-            User.fixture("B", null)
-        ))
+        // given
+        val savedUsers = userRepository.saveAll(
+            listOf(
+                User.fixture("A", null),
+                User.fixture("B", null),
+            ),
+        )
 
         userLoanHistoryRepository.saveAll(
             listOf(
                 UserLoanHistory.fixture(savedUsers[0], "book1", UserLoanStatus.LOANED),
                 UserLoanHistory.fixture(savedUsers[0], "book2", UserLoanStatus.LOANED),
                 UserLoanHistory.fixture(savedUsers[0], "book3", UserLoanStatus.RETURNED),
-            ))
+            ),
+        )
 
-        //when
+        // when
         val results = userService.getUserLoanHistories()
 
-        //then
+        // then
         val userAResult = results.first { it.name == "A" }
         val userBResult = results.first { it.name == "B" }
 
