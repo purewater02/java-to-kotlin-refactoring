@@ -17,9 +17,8 @@ class Book(
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    var id: Long? = null
+    var id: Long? = null,
 ) {
-
 
     init {
         if (name.isBlank()) {

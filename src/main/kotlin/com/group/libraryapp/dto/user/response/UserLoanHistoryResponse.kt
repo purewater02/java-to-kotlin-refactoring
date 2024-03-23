@@ -5,13 +5,13 @@ import com.group.libraryapp.domain.user.loanhistory.UserLoanHistory
 
 data class UserLoanHistoryResponse(
     val name: String,
-    val books: List<BookHistoryResponse>
+    val books: List<BookHistoryResponse>,
 ) {
     companion object {
         fun of(user: User): UserLoanHistoryResponse {
             return UserLoanHistoryResponse(
                 name = user.name,
-                books = user.userLoanHistories.map(BookHistoryResponse::of)
+                books = user.userLoanHistories.map(BookHistoryResponse::of),
             )
         }
     }

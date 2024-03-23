@@ -6,6 +6,7 @@ plugins {
     id 'org.jetbrains.kotlin.plugin.jpa' version '1.6.21'
     id 'org.jetbrains.kotlin.plugin.spring' version '1.6.21'
     id "com.diffplug.spotless" version "6.13.0"
+    id 'org.jetbrains.kotlin.kapt' version '1.6.21'
 }
 
 group = 'com.group'
@@ -25,6 +26,9 @@ dependencies {
     runtimeOnly 'com.h2database:h2'
     compileOnly 'org.projectlombok:lombok:1.18.30'
     annotationProcessor 'org.projectlombok:lombok:1.18.30'
+    implementation 'com.querydsl:querydsl-jpa:5.0.0'
+    kapt("com.querydsl:querydsl-apt:5.0.0:jpa")
+    kapt("org.springframework.boot:spring-boot-configuration-processor")
 
     testCompileOnly 'org.projectlombok:lombok:1.18.30'
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.30'

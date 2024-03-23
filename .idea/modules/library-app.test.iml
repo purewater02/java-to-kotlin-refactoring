@@ -29,13 +29,16 @@
               <args>
                 <arg>$MODULE_DIR$/../../build/classes/java/main</arg>
                 <arg>$MODULE_DIR$/../../build/classes/kotlin/main</arg>
+                <arg>$MODULE_DIR$/../../build/tmp/kapt3/classes/main</arg>
                 <arg>$MODULE_DIR$/../../build/libs/library-app-0.0.1-SNAPSHOT-plain.jar</arg>
               </args>
             </arrayArg>
             <arrayArg name="pluginClasspaths">
               <args>
+                <arg>$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-embeddable/1.6.21/97bdd5a752ce73b58ef16c17bc7f0ea2faff7a2e/kotlin-compiler-embeddable-1.6.21.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-scripting-jvm/1.6.21/ab52f6af29c00a8a9c89ea2b34b5f4d27960bd3f/kotlin-scripting-jvm-1.6.21.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-scripting-common/1.6.21/2e2e17b6e20c9c44f1d76d0df4f8f0b3fcfa944f/kotlin-scripting-common-1.6.21.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-reflect/1.6.21/5dc3574d9b7bebfcb4ec6b10ada4aaa9e140bd0b/kotlin-reflect-1.6.21.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.6.21/11ef67f1900634fd951bad28c53ec957fabbe5b8/kotlin-stdlib-1.6.21.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin-api/1.6.21/72164483511fee9af6715b0a3f2db4f075c94577/kotlin-gradle-plugin-api-1.6.21.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-gradle-plugin-model/1.6.21/27f5b68d0b3a021da1574893a1ee17caedaf1431/kotlin-gradle-plugin-model-1.6.21.jar</arg>
@@ -44,6 +47,9 @@
                 <arg>$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-native-utils/1.6.21/83287d8f685fa119850b1ca86c4e3a1fbff07109/kotlin-native-utils-1.6.21.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-project-model/1.6.21/71bf2c27e7ce1d59239f960738c0b3e4e23115f6/kotlin-project-model-1.6.21.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-script-runtime/1.6.21/99c6675100da5d6d5b1c5a1032f27f28008d101b/kotlin-script-runtime-1.6.21.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-daemon-embeddable/1.6.21/46b78cf392e1c4f10854c3cadba44abb7b82250f/kotlin-daemon-embeddable-1.6.21.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.intellij.deps/trove4j/1.0.20200330/3afb14d5f9ceb459d724e907a21145e8ff394f02/trove4j-1.0.20200330.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna/5.6.0/330f2244e9030119ab3030fc3fededc86713d9cc/jna-5.6.0.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-util-io/1.6.21/ea85a6e7a215ec2cb88d0a3825b94c5f1de5b220/kotlin-util-io-1.6.21.jar</arg>
                 <arg>$KOTLIN_BUNDLED$/lib/noarg-compiler-plugin.jar</arg>
                 <arg>$KOTLIN_BUNDLED$/lib/allopen-compiler-plugin.jar</arg>
@@ -74,6 +80,12 @@
   <component name="NewModuleRootManager">
     <output-test url="file://$MODULE_DIR$/../../build/classes/java/test" />
     <exclude-output />
+    <content url="file://$MODULE_DIR$/../../build/generated/source/kapt/test">
+      <sourceFolder url="file://$MODULE_DIR$/../../build/generated/source/kapt/test" isTestSource="true" generated="true" />
+    </content>
+    <content url="file://$MODULE_DIR$/../../build/generated/source/kaptKotlin/test">
+      <sourceFolder url="file://$MODULE_DIR$/../../build/generated/source/kaptKotlin/test" isTestSource="true" generated="true" />
+    </content>
     <content url="file://$MODULE_DIR$/../../build/generated/sources/annotationProcessor/java/test">
       <sourceFolder url="file://$MODULE_DIR$/../../build/generated/sources/annotationProcessor/java/test" isTestSource="true" generated="true" />
     </content>
@@ -83,12 +95,22 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library name="Gradle: kaptGeneratedClasses">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../../build/tmp/kapt3/classes/test" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
     <orderEntry type="module" module-name="com.group.library-app.main" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-data-jpa:2.6.8" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-web:2.6.8" level="project" />
     <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.21" level="project" />
     <orderEntry type="library" name="Gradle: com.fasterxml.jackson.module:jackson-module-kotlin:2.13.3" level="project" />
     <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-reflect:1.6.21" level="project" />
+    <orderEntry type="library" name="Gradle: com.querydsl:querydsl-jpa:5.0.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Gradle: org.projectlombok:lombok:1.18.30" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-test:2.6.8" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-aop:2.6.8" level="project" />
@@ -107,6 +129,7 @@
     <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.6.21" level="project" />
     <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-databind:2.13.3" level="project" />
     <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-annotations:2.13.3" level="project" />
+    <orderEntry type="library" name="Gradle: com.querydsl:querydsl-core:5.0.0" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-test-autoconfigure:2.6.8" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-test:2.6.8" level="project" />
     <orderEntry type="library" name="Gradle: com.jayway.jsonpath:json-path:2.6.0" level="project" />
@@ -152,6 +175,7 @@
     <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.6.21" level="project" />
     <orderEntry type="library" name="Gradle: org.jetbrains:annotations:13.0" level="project" />
     <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-core:2.13.3" level="project" />
+    <orderEntry type="library" name="Gradle: com.mysema.commons:mysema-commons-lang:0.2.4" level="project" />
     <orderEntry type="library" name="Gradle: net.minidev:json-smart:2.4.8" level="project" />
     <orderEntry type="library" name="Gradle: jakarta.activation:jakarta.activation-api:1.2.2" level="project" />
     <orderEntry type="library" name="Gradle: org.junit.jupiter:junit-jupiter-params:5.8.2" level="project" />
